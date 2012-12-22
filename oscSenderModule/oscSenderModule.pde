@@ -46,7 +46,6 @@ void draw()
   // calculate distance from center to right hand position
   PVector locationFromCenter = new PVector(rightHand.x-thresholdCenter.x, rightHand.y-thresholdCenter.y);
   float distance = sqrt(pow(locationFromCenter.x, 2)+pow(locationFromCenter.y, 2));
-  println("x: " + locationFromCenter.x + " y: " + locationFromCenter.y + " dist: " + distance);
 
   // right hand position
   ellipseMode(CENTER);
@@ -104,7 +103,7 @@ float velocityValue(float radius)
     velocity = minVelocityValue;
   else if (velocity > maxVelocityValue) 
     velocity = maxVelocityValue;
-  println("thr.: " + thresholdRadius + "dist:" + radius + " slope: " + slope + " vel: "+ velocity);
+
   return velocity;
 }
 
